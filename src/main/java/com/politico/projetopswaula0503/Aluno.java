@@ -12,15 +12,15 @@ package com.politico.projetopswaula0503;
 public class Aluno {
 
     public boolean situacao(double freq, double P1, double Trabalho, double ProjAula, double PF) {
-        double media1 = 0.7 * ((P1 + Trabalho) / 2) + ProjAula * 0.3;
+        double media1 = 0.7 * ((P1 + Trabalho) / 2.0) + ProjAula * 0.3;
         boolean pf = false;
         boolean aprovado = false;
 
-        if (freq <= 7) {
-            if (media1 >= 7) {
+        if (freq >= 7.0) {
+            if (media1 >= 7.0) {
                 System.out.println("Aprovado");
                 aprovado = true;
-            } else if (media1 < 3) {
+            } else if (media1 < 3.0) {
                 System.out.println("Reprovado");
                 aprovado = false;
             } else {
@@ -28,7 +28,7 @@ public class Aluno {
             }
 
             if (pf == true) {
-                if ((PF + media1 / 2) >= 5) {
+                if (((PF + media1) / 2.0) >= 5.0) {
                     System.out.println("Aprovado");
                     aprovado = true;
                 } else {
