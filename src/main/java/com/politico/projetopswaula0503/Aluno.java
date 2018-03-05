@@ -6,17 +6,16 @@
 package com.politico.projetopswaula0503;
 
 /**
- *
+ * media1 = 0.7 * ((P1 + Trabalho) / 2.0) + ProjAula * 0.3
  * @author Lucas Carvalho
  */
 public class Aluno {
-
+    
     public boolean situacao(double freq, double P1, double Trabalho, double ProjAula, double PF) {
         double media1 = 0.7 * ((P1 + Trabalho) / 2.0) + ProjAula * 0.3;
         boolean pf = false;
         boolean aprovado = false;
-
-        if (freq >= 7.0) {
+        if (freq >= 75) {
             if (media1 >= 7.0) {
                 System.out.println("Aprovado");
                 aprovado = true;
