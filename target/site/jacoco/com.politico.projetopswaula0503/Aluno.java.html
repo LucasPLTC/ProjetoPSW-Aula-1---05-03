@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Aluno.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ProjetoPSWAula0503</a> &gt; <a href="index.source.html" class="el_package">com.politico.projetopswaula0503</a> &gt; <span class="el_source">Aluno.java</span></div><h1>Aluno.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.politico.projetopswaula0503;
+
+/**
+ * media1 = 0.7 * ((P1 + Trabalho) / 2.0) + ProjAula * 0.3
+ * @author Lucas Carvalho
+ */
+<span class="fc" id="L12">public class Aluno {</span>
+    
+    public boolean situacao(double freq, double P1, double Trabalho, double ProjAula, double PF) {
+<span class="fc" id="L15">        double media1 = 0.7 * ((P1 + Trabalho) / 2.0) + ProjAula * 0.3;</span>
+<span class="fc" id="L16">        boolean pf = false;</span>
+<span class="fc" id="L17">        boolean aprovado = false;</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (freq &gt;= 75) {</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">            if (media1 &gt;= 7.0) {</span>
+<span class="fc" id="L20">                System.out.println(&quot;Aprovado&quot;);</span>
+<span class="fc" id="L21">                aprovado = true;</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">            } else if (media1 &lt; 3.0) {</span>
+<span class="fc" id="L23">                System.out.println(&quot;Reprovado&quot;);</span>
+<span class="fc" id="L24">                aprovado = false;</span>
+            } else {
+<span class="fc" id="L26">                pf = true;</span>
+            }
+
+<span class="fc bfc" id="L29" title="All 2 branches covered.">            if (pf == true) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">                if (((PF + media1) / 2.0) &gt;= 5.0) {</span>
+<span class="fc" id="L31">                    System.out.println(&quot;Aprovado&quot;);</span>
+<span class="fc" id="L32">                    aprovado = true;</span>
+                } else {
+<span class="fc" id="L34">                    System.out.println(&quot;Reprovado&quot;);</span>
+<span class="fc" id="L35">                    aprovado = false;</span>
+                }
+            }
+        } else {
+<span class="fc" id="L39">            aprovado = false;</span>
+        }
+
+<span class="fc" id="L42">        return aprovado;</span>
+
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>
