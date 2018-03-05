@@ -38,7 +38,7 @@ public class AlunoTest {
     }
 
     /**
-     * Test of situacao method, of class Aluno.
+     * Teste da reprovacao por frequencia abaixo de 75%
      */
     @Test
     public void testSituacao() {
@@ -55,10 +55,14 @@ public class AlunoTest {
         
        
     }
+    
+    /**
+     * Teste da aprovacao direta
+     */
     @Test
     public void testSituacao2() {
         System.out.println("situacao2");
-        double freq = 10.0;
+        double freq = 100;
         double P1 = 10.0;
         double Trabalho = 10.0;
         double ProjAula = 10.0;
@@ -70,10 +74,14 @@ public class AlunoTest {
         
        
     }
+    
+    /**
+     * Teste da reprovacao direta (sem prova final)
+     */
     @Test
     public void testSituacao3() {
         System.out.println("situacao3");
-        double freq = 10.0;
+        double freq = 100;
         double P1 = 2.0;
         double Trabalho = 2.0;
         double ProjAula = 2.0;
@@ -85,10 +93,14 @@ public class AlunoTest {
         
        
     }
+    
+    /**
+     * Teste da aprovacao na prova final
+     */
     @Test
     public void testSituacao4() {
         System.out.println("situacao4");
-        double freq = 10.0;
+        double freq = 100;
         double P1 = 6.0;
         double Trabalho = 6.0;
         double ProjAula = 6.0;
@@ -101,10 +113,13 @@ public class AlunoTest {
        
     }
     
+    /**
+     * Teste da reprovacao na prova final
+     */
     @Test
     public void testSituacao5() {
         System.out.println("situacao5");
-        double freq = 10.0;
+        double freq = 100;
         double P1 = 5.0;
         double Trabalho = 5.0;
         double ProjAula = 5.0;
